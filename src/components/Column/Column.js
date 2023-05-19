@@ -5,6 +5,8 @@ import { useSelector } from 'react-redux';
 
 const Column = (props) => {
   const cards = useSelector((state) =>
+    /**we filter state.cards accordingly, we return only those whose columnId
+     *  property is compatible with the given column. */
     state.cards.filter((card) => card.columnId === props.id)
   );
 
@@ -19,7 +21,7 @@ const Column = (props) => {
           <Card key={card.id} title={card.title} />
         ))}
       </ul>
-      <CardForm columnId={props.id} action={props.action} />
+      <CardForm columnId={props.id} />
     </article>
   );
 };

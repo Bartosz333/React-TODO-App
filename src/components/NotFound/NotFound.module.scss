@@ -1,0 +1,12 @@
+@import '../../styles/settings.scss';
+
+.notFound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font-family: $font-text;
+        font-size: 24px;
+    }
+}

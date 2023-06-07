@@ -1,9 +1,10 @@
+import { PageTitle } from '../PageTitle/PageTitle';
 import styles from './NotFound.module.scss';
 
 export const NotFound = () => {
   return (
     <div className={styles.notFound}>
-      <h2>404 NOT FOUND</h2>
+      <PageTitle>404 NOT FOUND</PageTitle>
     </div>
   );
 };

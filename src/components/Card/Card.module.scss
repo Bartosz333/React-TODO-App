@@ -1,5 +1,4 @@
 @import '../../styles/settings.scss';
-
 .card {
     position: relative;
     background: $color-light;
@@ -10,4 +9,13 @@
     display: flex;
     justify-content: space-between;
     font-weight: bold;
+}
+
+.btn {
+    border: none;
+    background-color: transparent;
+}
+
+.isFavorite {
+    color: $color-warning;
 }

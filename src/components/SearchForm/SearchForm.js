@@ -4,10 +4,15 @@ import Button from '../Button/Button';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { searchString } from '../../redux/store';
+import { useSelector } from 'react-redux';
+import { getSearchString } from '../../redux/store';
 
-const SearchForm = () => {
+export const SearchForm = () => {
+  const updateSearchString = useSelector(getSearchString);
+  const [string, setString] = useState(updateSearchString);
+
   const dispatch = useDispatch();
-  const [string, setString] = useState('');
+
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(searchString(string));
@@ -25,5 +30,3 @@ const SearchForm = () => {
     </form>
   );
 };
-
-export default SearchForm;

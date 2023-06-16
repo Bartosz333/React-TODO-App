@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import { getAllLists } from '../../redux/store';
+import { getAllLists } from '../../redux/listReducer';
 import { Link } from 'react-router-dom';
 import styles from './Lists.module.scss';
 import React from 'react';
